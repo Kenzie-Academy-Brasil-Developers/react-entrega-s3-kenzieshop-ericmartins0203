@@ -10,8 +10,8 @@ function Store() {
         <Nav />
       </header>
       <ul>
-        {state.map((item) => (
-          <Card item={item} />
+        {state.map((item, index) => (
+          <Card key={index} item={item} />
         ))}
       </ul>
     </div>

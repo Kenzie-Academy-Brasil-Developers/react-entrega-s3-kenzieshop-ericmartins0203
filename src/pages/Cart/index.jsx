@@ -6,7 +6,7 @@ import { removeCartThunk } from "../../store/modules/cart/thunks";
 function Cart() {
   const state = useSelector((state) => state.cart);
 
-  console.log(state);
+  console.log("state", state);
   return (
     <>
       <header>
@@ -14,9 +14,9 @@ function Cart() {
       </header>
       <ul>
         {state.length > 0 &&
-          state.map((item) => (
+          state.map((item, index) => (
             <Card
-              key={item.id}
+              key={index}
               item={item}
               type="remove do"
               color="secondary"
